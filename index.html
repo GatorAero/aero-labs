@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mr. Smith's Aero Labs</title>
+  <style>
+    :root {
+      --ink: #122033;
+      --muted: #4c5d73;
+      --line: #d5deea;
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --navy: #0c3b66;
+      --navy-deep: #082844;
+      --sky: #e7f1fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, #e8f0f8 0, var(--bg) 220px);
+      font: 18px/1.5 "Segoe UI", system-ui, sans-serif;
+    }
+
+    header {
+      background: var(--navy-deep);
+      color: #f4f8fc;
+      padding: 2.5rem 1.25rem 2rem;
+    }
+
+    .wrap {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .mark svg {
+      width: 2.25rem;
+      height: 2.25rem;
+      flex: none;
+    }
+
+    .kicker {
+      margin: 0;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b7cbe0;
+    }
+
+    h1 {
+      margin: 0.15rem 0 0.5rem;
+      font-size: 2rem;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 0;
+      max-width: 36rem;
+      color: #d5e3f0;
+    }
+
+    main {
+      padding: 1.75rem 1.25rem 2.5rem;
+    }
+
+    h2 {
+      margin: 0 0 0.85rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .labs {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .labs a {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 1px 2px rgba(16, 32, 51, 0.04);
+    }
+
+    .labs a:hover,
+    .labs a:focus-visible {
+      border-color: #8eb0d4;
+      background: var(--sky);
+      outline: none;
+    }
+
+    .labs a:focus-visible {
+      box-shadow: 0 0 0 3px rgba(12, 59, 102, 0.28);
+    }
+
+    .name {
+      display: block;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .blurb {
+      display: block;
+      margin-top: 0.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 0 1.25rem 2.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer p { margin: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d6e8f8" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 14c4-5 10-6 18-4"/>
+          <path d="M3 9h7M3 18h11"/>
+          <path d="M14 18c3 0 5-1 7-3"/>
+        </svg>
+        <p class="kicker">Aero Tech II</p>
+      </div>
+      <h1>Mr. Smith's Aero Labs</h1>
+      <p>Interactive labs that open in the browser. Each lab is stored in this site, so it still works when outside downloads are blocked.</p>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h2>Labs</h2>
+      <ul class="labs">
+        <li>
+          <a href="wind-tunnel/">
+            <span class="name">Wind Tunnel Lab: Lift, Drag &amp; Angle of Attack</span>
+            <span class="blurb">Change airspeed and angle of attack, then read lift, drag, and stall.</span>
+          </a>
+        </li>
+        <!-- To add a lab: copy the <li> above, point href at the new folder, and update the label. -->
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>Open a lab on its own, or embed its page in Canvas with an iframe.</p>
+    </div>
+  </footer>
+</body>
+</html>
